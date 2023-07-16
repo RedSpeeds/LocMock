@@ -19,4 +19,6 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="locupdate">Update location</string>
     <string name="settings">Settings</string>
+    <string name="connectWatch">Connect to watch</string>
+    <string name="MockNeeded"><![CDATA[Enable mock permissions to proceed.\nSettings -> Developer -> Mock application -> LocMock]]></string>
 </resources>

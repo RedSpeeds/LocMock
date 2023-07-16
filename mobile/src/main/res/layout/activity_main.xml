@@ -34,14 +34,26 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toEndOf="@+id/LocUpdate"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/ConnectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connectWatch"
+        app:layout_constraintBottom_toTopOf="@+id/LocUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
 </androidx.constraintlayout.widget.ConstraintLayout>

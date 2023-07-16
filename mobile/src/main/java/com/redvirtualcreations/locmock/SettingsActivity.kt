@@ -1,7 +1,10 @@
 package com.redvirtualcreations.locmock
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.EditTextPreference
+import androidx.preference.EditTextPreference.OnBindEditTextListener
 import androidx.preference.PreferenceFragmentCompat
 
 class SettingsActivity : AppCompatActivity() {
@@ -21,6 +24,15 @@ class SettingsActivity : AppCompatActivity() {
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
+            preferenceManager.findPreference<EditTextPreference>("accuracy")
+                ?.setOnBindEditTextListener {
+                    OnBindEditTextListener { editText ->
+                        editText.inputType =
+                            InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_SIGNED
+                    }
+                }
+
         }
+
     }
 }
